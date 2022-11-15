@@ -1,8 +1,8 @@
-# Transform your old and tired Haskell source files in shining Notebooks
+# Transform your old and tired Haskell source files into shining Notebooks
 
 Have you ever suffered from Notebook envy?
     
-Have you ever felt a pang of jealousy for Python programmers and their cool data science Jupyter notebooks?
+Have you ever felt a pang of jealousy about Python programmers and their cool data science Jupyter notebooks?
 
 The most complete antidote to this particular form of existential angst is installing Haskell's own [Jupyter backend](https://hackage.haskell.org/package/ihaskell).
 
@@ -36,7 +36,7 @@ Demo video captured using [LICECap](https://www.cockos.com/licecap/).
 
 * Generate Markdown/HTML code in Haskell comments using HLS's built-in [eval plugin](https://github.com/haskell/haskell-language-server/blob/master/plugins/hls-eval-plugin/README.md). Check out [src/Notebook.hs](src/Notebook.hs) for examples and tips.
 
-* Type **⌘K V** in the Haskell source file to open the sideline Markdown preview. 
+* **⌘K V** in the Haskell source file to open the sideline Markdown preview. 
 
 # Run the Example File Locally
 
@@ -47,8 +47,4 @@ cd notebook;stack build
 
 Note: compilation will take a long time as the examples use a variety of large packages ([pandoc](https://hackage.haskell.org/package/pandoc), [diagrams](https://hackage.haskell.org/package/diagrams), etc.).
 
-Open [src/Notebook.hs](src/Notebook.hs) in VS Code and type **⌘K V** to open the Markdown preview.
-
-
-
-
+Open [src/Notebook.hs](src/Notebook.hs) in VS Code and **⌘K V** to open the Markdown preview.
