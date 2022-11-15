@@ -1,4 +1,4 @@
-# Transform your old and tired Haskell source files in  shining Notebooks 
+# Transform your old and tired Haskell source files in shining Notebooks 
 
     Have you ever suffered of Notebook envy?
     
