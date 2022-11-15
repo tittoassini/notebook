@@ -34,7 +34,7 @@ Demo video captured using [LICECap](https://www.cockos.com/licecap/).
 
 * Optional: Install a [Mermaid](https://mermaid-js.github.io/mermaid) VS Code extension like [Markdown Mermaid](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid).
 
-* Generate Markdown/HTML code in Haskell comments using HLS's built-in [eval plugins](https://github.com/haskell/haskell-language-server/blob/master/plugins/hls-eval-plugin/README.md). Check [src/Notebook.hs](src/Notebook.hs) for a few worked out examples. 
+* Generate Markdown/HTML code in Haskell comments using HLS's built-in [eval plugin](https://github.com/haskell/haskell-language-server/blob/master/plugins/hls-eval-plugin/README.md). Check [src/Notebook.hs](src/Notebook.hs) for a few worked out examples. 
 
 * Type **Ctrl-K V** in the Haskell source file to open the sideline Markdown preview 
 
@@ -47,7 +47,7 @@ cd notebook;stack build
 
 Note: compilation will take a long time as the examples use a varity of large packages ([pandoc](https://hackage.haskell.org/package/pandoc), [diagrams](https://hackage.haskell.org/package/diagrams), etc.).
 
-Open [src/Notebook.hs](src/Notebook.hs) and type **Ctrl-K V**.
+Open [src/Notebook.hs](src/Notebook.hs) in VS Code and type **Ctrl-K V** to open the Markdown preview.
 
 
 
