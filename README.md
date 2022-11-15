@@ -1,12 +1,12 @@
-# Transform your old and tired Haskell source files in shining Notebooks 
+# Transform your old and tired Haskell source files in shining Notebooks
 
-    Have you ever suffered of Notebook envy?
+Have you ever suffered of Notebook envy?
     
-    Have you ever felt a pang of jealousy for Python programmers and their cool data science Jupyter notebooks?
-    
-    The most complete antidote to this particular form of existential angst is installing Haskell's own [Jupyter backend](https://hackage.haskell.org/package/ihaskell).
-    
-    But, if like most Haskell developers these days, you use the [Haskell Language Server](https://github.com/haskell/haskell-language-server) and [VS Code](https://code.visualstudio.com/) you can immediately transform any Haskell source file in a rough and ready notebook without any additional configuration and without the need to run another bulky server.
+Have you ever felt a pang of jealousy for Python programmers and their cool data science Jupyter notebooks?
+
+The most complete antidote to this particular form of existential angst is installing Haskell's own [Jupyter backend](https://hackage.haskell.org/package/ihaskell).
+
+But, if like most Haskell developers these days, you use the [Haskell Language Server](https://github.com/haskell/haskell-language-server) and [VS Code](https://code.visualstudio.com/) you can immediately transform any Haskell source file in a rough and ready notebook without any additional configuration and without the need to run another bulky server.
     
 # Demo
 
