@@ -81,7 +81,7 @@ If you are working with a single file, you might just use `stack`'s built-in fil
 stack build --file-watch --exec "pandoc -s  --from markdown_mmd  --highlight-style kate -t html -F mermaid-filter --metadata title=Notebook  -o html/Notebook.html src/Notebook.hs" 
 ```
 
-For multiple files, you will need a more sophisticated file watching command like `chokidar`:
+For multiple files, you will need a more sophisticated file watching command like [chokidar](https://www.npmjs.com/package/chokidar-cli):
 
 ```bash
 npm install -g chokidar-cli
