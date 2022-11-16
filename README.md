@@ -25,7 +25,6 @@ Check out this [example](src/Notebook.hs) of generating and displaying:
 
 ![Demo](notebook.gif)
 
-
 Demo video captured using [LICECap](https://www.cockos.com/licecap/).
 
 # Now You Do It
@@ -48,3 +47,47 @@ cd notebook;stack build
 Note: compilation will take a long time as the examples use a variety of large packages ([pandoc](https://hackage.haskell.org/package/pandoc), [diagrams](https://hackage.haskell.org/package/diagrams), etc.).
 
 Open [src/Notebook.hs](src/Notebook.hs) in VS Code and **⌘K V** to open the Markdown preview.
+
+# What? No VS Code?
+
+If your editor supports HLS but does not have a way of displaying the generated markdown/html, you might run a separate process that checks for any changed Haskell source file and automatically process and displays it.
+
+Install `pandoc` and `mermaid-filter`:
+
+```bash
+npm install --global mermaid-filter
+
+stack install pandoc
+```
+
+THe basic `pandoc` invocation to, for example, convert `src\Notebook.hs` to `html\Notebook.html` is:
+
+```bash
+pandoc -s  --from markdown_mmd  --highlight-style kate -t html -F mermaid-filter --metadata title=Notebook  -o html/Notebook.html src/Notebook.hs
+```
+
+The result it very similar to what we see in VS Code:
+
+![Demo](notebook-pandoc.gif)
+
+Demo video captured using [LICECap](https://www.cockos.com/licecap/).
+
+
+To run `pandoc` automatically when a source file changes there are many options.
+
+If you are working with a single file, you might just use `stack` built-in file watcher:
+
+```bash
+stack build --file-watch --exec "pandoc -s  --from markdown_mmd  --highlight-style kate -t html -F mermaid-filter --metadata title=Notebook  -o html/Notebook.html src/Notebook.hs" 
+```
+
+For multiple files, you will need a more sophisticated file watching command like `chokidar`:
+
+```bash
+npm install -g chokidar-cli
+
+chokidar "**/*.hs" -c "if [ '{event}' = 'change' ]; then pandoc -s  --from markdown_mmd --highlight-style kate -t html -F mermaid-filter --metadata title={path}  -o {path}.html {path}; fi;" 
+```
+
+This will create/update an `.hs.html` file every time an `.hs` file is modified. 
+

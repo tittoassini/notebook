@@ -1,7 +1,17 @@
+
 {- |
 Rough and ready Notebook.
 
-To display the code correctly, include it into a markdown code block.
+
+This is needed only for stand-alone pandoc processing, to fully display long source lines (see https://stackoverflow.com/questions/73078541/markdown-to-html-via-pandoc-full-page-width):
+
+``` {=html}
+<style>
+body { min-width: 95% !important;}
+</style>
+```
+
+To display the code correctly, include it into a markdown code block:
 
 ```haskell
 -}
@@ -284,4 +294,9 @@ table t = do
             where
                 row ss = Row border $ map (\s -> Cell border AlignLeft (RowSpan 1) (ColSpan 1) [Plain [Str s]]) ss
                 border = ("", [], [("style", "border:1px solid black")])
+
+{-
+```
+
+-}
 
