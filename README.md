@@ -60,7 +60,7 @@ npm install --global mermaid-filter
 stack install pandoc
 ```
 
-THe basic `pandoc` invocation to, for example, convert `src\Notebook.hs` to `html\Notebook.html` is:
+The basic `pandoc` invocation to, for example, convert `src\Notebook.hs` to `html\Notebook.html` is:
 
 ```bash
 pandoc -s  --from markdown_mmd  --highlight-style kate -t html -F mermaid-filter --metadata title=Notebook  -o html/Notebook.html src/Notebook.hs
@@ -75,7 +75,7 @@ Demo video captured using [LICECap](https://www.cockos.com/licecap/).
 
 To run `pandoc` automatically when a source file changes there are many options.
 
-If you are working with a single file, you might just use `stack` built-in file watcher:
+If you are working with a single file, you might just use `stack`'s built-in file watcher:
 
 ```bash
 stack build --file-watch --exec "pandoc -s  --from markdown_mmd  --highlight-style kate -t html -F mermaid-filter --metadata title=Notebook  -o html/Notebook.html src/Notebook.hs" 
