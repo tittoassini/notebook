@@ -25,7 +25,7 @@ Check out this [example](src/Notebook.hs) of generating and displaying:
 
 ![Demo](notebook.gif)
 
-Demo video captured using [LICECap](https://www.cockos.com/licecap/).
+Video captured using [LICECap](https://www.cockos.com/licecap/).
 
 # Now You Do It
 
@@ -55,7 +55,7 @@ If your editor supports HLS but does not have a way of displaying the generated 
 Install `pandoc` and `mermaid-filter`:
 
 ```bash
-npm install --global mermaid-filter
+npm install -g mermaid-filter
 
 stack install pandoc
 ```
@@ -70,7 +70,7 @@ The result it very similar to what we see in VS Code:
 
 ![Demo](notebook-pandoc.gif)
 
-Demo video captured using [LICECap](https://www.cockos.com/licecap/).
+Video captured using [LICECap](https://www.cockos.com/licecap/).
 
 
 To run `pandoc` automatically when a source file changes there are many options.
@@ -81,7 +81,7 @@ If you are working with a single file, you might just use `stack`'s built-in fil
 stack build --file-watch --exec "pandoc -s  --from markdown_mmd  --highlight-style kate -t html -F mermaid-filter --metadata title=Notebook  -o html/Notebook.html src/Notebook.hs" 
 ```
 
-For multiple files, you will need a more sophisticated file watching command like [chokidar](https://www.npmjs.com/package/chokidar-cli):
+For multiple files, you will need a more sophisticated file watching utility like [chokidar](https://www.npmjs.com/package/chokidar-cli):
 
 ```bash
 npm install -g chokidar-cli
